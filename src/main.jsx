@@ -10,6 +10,7 @@ import Root from './layouts/root/Root.jsx';
 import Home from './layouts/home/Home.jsx'
 import Error from './layouts/Error/Error.jsx'
 import Details from './layouts/Details/Details.jsx';
+import Login from './layouts/login/Login.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         path: '/property/:id',
         loader: () => fetch('./data.json'),
         element: <Details></Details>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       }
     ]
   },
