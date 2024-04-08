@@ -2,7 +2,7 @@ import Header from "../header/Header";
 
 const HOme = () => {
     return (
-        <div>
+        <div className="max-w-[1140px] mx-auto">
             <Header></Header>
         </div>
     );
