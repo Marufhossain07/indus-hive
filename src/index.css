@@ -27,6 +27,12 @@
     align-items: center;
   }
  
+  #nav a.active{
+    border: 1px solid orange;
+   background-color: white;
+   color: black;
+   font-weight: 600;
+   }
 
   .swiper-slide img {
     display: block;

@@ -1,81 +1,74 @@
 [
-    {
-      "id": 1,
-      "estate_title": "Industrial Warehouse in Downtown",
-      "segment_name": "Industrial",
-      "description": "Spacious warehouse located in the heart of the city, suitable for manufacturing or storage purposes.",
-      "price": "$5000/month",
-      "status": "rent",
-      "area": "5000 sqft",
-      "location": "Downtown, CityName",
-      "facilities": ["loading dock", "office space", "security system"],
-      "image": "https://example.com/warehouse_image1.jpg",
-      "ViewProperty_button": "https://example.com/view_property?id=1"
-    },
-    {
-      "id": 2,
-      "estate_title": "Modern Industrial Park",
-      "segment_name": "Industrial",
-      "description": "State-of-the-art industrial park offering flexible spaces for lease.",
-      "price": "$2,000,000",
-      "status": "sale",
-      "area": "10 acres",
-      "location": "Industrial Zone, CityName",
-      "facilities": ["utilities included", "ample parking", "24/7 security"],
-      "image": "https://example.com/industrial_park_image1.jpg",
-      "ViewProperty_button": "https://example.com/view_property?id=2"
-    },
-    {
-      "id": 3,
-      "estate_title": "Industrial Workshop with Office Space",
-      "segment_name": "Industrial",
-      "description": "Workshop facility with attached office space, suitable for light manufacturing or automotive work.",
-      "price": "$300,000",
-      "status": "sale",
-      "area": "3000 sqft",
-      "location": "Industrial Area, CityName",
-      "facilities": ["workshop area", "office rooms", "restroom facilities"],
-      "image": "https://example.com/workshop_image1.jpg",
-      "ViewProperty_button": "https://example.com/view_property?id=3"
-    },
-    {
-      "id": 4,
-      "estate_title": "Industrial Storage Facility",
-      "segment_name": "Industrial",
-      "description": "Large storage facility suitable for storing goods, equipment, or vehicles.",
-      "price": "$8000/month",
-      "status": "rent",
-      "area": "10000 sqft",
-      "location": "Industrial District, CityName",
-      "facilities": ["large loading doors", "climate control", "security fencing"],
-      "image": "https://example.com/storage_facility_image1.jpg",
-      "ViewProperty_button": "https://example.com/view_property?id=4"
-    },
-    {
-      "id": 5,
-      "estate_title": "Industrial Manufacturing Plant",
-      "segment_name": "Industrial",
-      "description": "Fully equipped manufacturing plant with high ceilings and heavy-duty machinery.",
-      "price": "$10,000,000",
-      "status": "sale",
-      "area": "50,000 sqft",
-      "location": "Industrial Park, CityName",
-      "facilities": ["assembly line", "warehousing space", "employee facilities"],
-      "image": "https://example.com/manufacturing_plant_image1.jpg",
-      "ViewProperty_button": "https://example.com/view_property?id=5"
-    },
-    {
-      "id": 6,
-      "estate_title": "Industrial Flex Space",
-      "segment_name": "Industrial",
-      "description": "Flexible industrial space suitable for various purposes, can be adapted to tenant needs.",
-      "price": "$6000/month",
-      "status": "rent",
-      "area": "7000 sqft",
-      "location": "Industrial Zone, CityName",
-      "facilities": ["open layout", "loading bay access", "office area"],
-      "image": "https://example.com/flex_space_image1.jpg",
-      "ViewProperty_button": "https://example.com/view_property?id=6"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Modern Warehouse Complex Building",
+    "segment": "Warehouses",
+    "description": "State-of-the-art warehouse complex offering versatile storage solutions.",
+    "price": "$5000/month",
+    "status": "rent",
+    "area": "5000 sqft",
+    "location": "Downtown, CityName",
+    "facilities": ["loading dock", "office space", "security system"],
+    "image": "https://i.ibb.co/d45JtV2/card1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Industrial Manufacturing Plant",
+    "segment": "Factories",
+    "description": "Fully equipped manufacturing plant with high ceilings and heavy-duty machinery.",
+    "price": "$10,000,000",
+    "status": "sale",
+    "area": "50,000 sqft",
+    "location": "Industrial Park, CityName",
+    "facilities": ["assembly line", "warehousing space", "employee facilities"],
+    "image": "https://i.ibb.co/H7cSN57/card2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Green Energy Production Plant",
+    "segment": "Production plants",
+    "description": "Cutting-edge production plant harnessing renewable energy sources for sustainable operations.",
+    "price": "$8,000,000",
+    "status": "sale",
+    "area": "30 acres",
+    "location": "Green Valley, CityName",
+    "facilities": ["solar panels", "wind turbines", "energy storage"],
+    "image": "https://i.ibb.co/YTd6QbR/card3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Industrial Park with Modern Facilities",
+    "segment": "Industrial parks",
+    "description": "Dynamic industrial park featuring modern amenities and strategic location.",
+    "price": "$2,000,000",
+    "status": "sale",
+    "area": "100 acres",
+    "location": "Strategic Zone, CityName",
+    "facilities": ["utilities included", "ample parking", "24/7 security"],
+    "image": "https://i.ibb.co/kHH8s6M/card4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Temperature-Controlled Cold Storage Facility",
+    "segment": "Cold storage facilities",
+    "description": "Specialized cold storage facility ensuring optimal preservation for perishable goods.",
+    "price": "$7000/month",
+    "status": "rent",
+    "area": "10,000 sqft",
+    "location": "Cold Zone, CityName",
+    "facilities": ["climate control", "freezer rooms", "loading docks"],
+    "image": "https://i.ibb.co/ykmVtbd/card5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Renewable Energy Power Plant",
+    "segment": "Power plants",
+    "description": "Innovative power plant utilizing renewable energy sources for efficient and sustainable energy production.",
+    "price": "$15,000,000",
+    "status": "sale",
+    "area": "50 acres",
+    "location": "Renewable Zone, CityName",
+    "facilities": ["solar panels", "wind turbines", "battery storage"],
+    "image": "https://i.ibb.co/3fNg4qQ/card6.jpg"
+  }
+]
