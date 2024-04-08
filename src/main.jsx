@@ -11,6 +11,7 @@ import Home from './layouts/home/Home.jsx'
 import Error from './layouts/Error/Error.jsx'
 import Details from './layouts/Details/Details.jsx';
 import Login from './layouts/login/Login.jsx';
+import Register from './layouts/register/Register.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },

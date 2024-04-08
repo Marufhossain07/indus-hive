@@ -1,5 +1,8 @@
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { AiOutlineEye } from "react-icons/ai";
 const Login = () => {
+    const [showPassword, setShowPassword] = useState(false);
     return (
         <div className="mt-10">
             <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-orange-200">
@@ -11,8 +14,10 @@ const Login = () => {
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block font-bold text-lg dark:text-gray-600">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-
+                        <div className="relative">
+                        <input type={ showPassword ? "text" : "password"} name="password" id="password" placeholder="Your Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                        <span onClick={()=> setShowPassword(!showPassword)} className="absolute cursor-pointer right-3 top-3"><AiOutlineEye className="text-2xl" /></span>
+                        </div>
                     </div>
                     <button className='btn w-full font-bold font-inter py-2 px-8 bg-orange-500 border-none text-white'>Login</button>
                 </form>
@@ -33,8 +38,8 @@ const Login = () => {
                         </svg>
                     </button>
                 </div>
-                <p className=" text-center sm:px-6 dark:text-gray-600">Do not have an account? 
-                    <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-800"> Register</a>
+                <p className=" text-center sm:px-6 dark:text-gray-600">Do not have an account?
+                    <Link to="/register"><a rel="noopener noreferrer" href="" className="underline dark:text-gray-800"> Register</a></Link>
                 </p>
             </div>
         </div>
