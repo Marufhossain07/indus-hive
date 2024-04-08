@@ -8,7 +8,7 @@ const Navbar = () => {
     </>
     return (
         <div className="mt-10">
-            <div className="navbar max-w-[1140px] mx-auto">
+            <div className="navbar p-0 max-w-[1140px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -18,7 +18,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-orange-500 text-4xl">IndusHive</a>
+                    <a className="btn btn-ghost pl-0 text-orange-500 text-4xl">IndusHive</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul id="nav" className="menu menu-horizontal px-1">
