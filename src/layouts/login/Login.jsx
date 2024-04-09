@@ -1,13 +1,39 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineEye } from "react-icons/ai";
+import { ToastContainer, toast } from 'react-toastify';
+import { Providers } from "../../AuthProvider/AuthProvider";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const {signIn} = useContext(Providers)
+
+    const handleLogin = e =>{
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        signIn(email, password)
+        .then(result => {
+            toast('Successfully Sign Up')
+        })
+        .catch((error)=>{
+            const errorMessage = error.message.slice(10)
+            toast.error(errorMessage, {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        })
+    }
     return (
         <div className="mt-10">
             <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-orange-200">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
-                <form noValidate="" action="" className="space-y-6">
+                <form onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
                     <div className="space-y-1 text-sm">
                         <label className="block font-bold text-lg dark:text-gray-600">Email</label>
                         <input type="email" name="email" id="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
@@ -42,6 +68,18 @@ const Login = () => {
                     <Link to="/register"><a rel="noopener noreferrer" href="" className="underline dark:text-gray-800"> Register</a></Link>
                 </p>
             </div>
+            <ToastContainer
+                position="top-right"
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light" 
+                />
         </div>
     );
 };
