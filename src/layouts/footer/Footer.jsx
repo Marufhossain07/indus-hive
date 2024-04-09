@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <footer className="px-4 divide-y bg-[#181518] text-white font-pop mt-96">
+        <footer className="px-4 divide-y bg-[#181518] text-white font-pop mt-10">
             <div className="container flex flex-col max-w-[1140px] mx-auto justify-between py-20 space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
