@@ -1,4 +1,4 @@
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
 import { useLoaderData, useParams } from "react-router-dom";
 import '../../index.css'
 import 'leaflet/dist/leaflet.css';
@@ -8,14 +8,14 @@ const Details = () => {
     const parseId = JSON.parse(id)
     const property = data.find(property => property.id == parseId)
     const { title, segment, description, price, status, area, location, facilities, image, latitude, longitude } = property
-    console.log(latitude,longitude)
+
     return (
         <div className="max-w-[1140px] mx-auto mt-10">
             <div className="bg-orange-200 rounded-t-lg">
                 <p className="absolute uppercase font-bold bg-orange-400 py-2 px-5 text-white rounded-tl-lg">For {status}</p>
                 <img className="mx-auto" src={image} alt="" />
             </div>
-            <div className="bg-orange-400 text-white flex py-5 items-center px-10 justify-between rounded-b-lg">
+            <div className="bg-orange-400 text-white flex flex-col md:flex-row lg:flex-row gap-5 py-5 items-center px-10 justify-between rounded-b-lg">
                 <div className="space-y-2">
                     <p className="font-inter font-medium text-lg">{location}</p>
                     <h3 className="capitalize font-pop text-4xl font-bold">{title}</h3>
@@ -29,7 +29,7 @@ const Details = () => {
             <h3 className="text-2xl font-semibold my-5">Description </h3>
             <p className=" font-inter">{description}</p>
             <p className="capitalize font-pop text-lg font-medium">Area : {area}</p>
-            <div className='flex justify-between gap-3'>
+            <div className='flex flex-col md:flex-row lg:flex-row justify-between gap-3'>
                 <div>
                 <h3 className="text-2xl font-semibold mt-5">Facilites </h3>
                 <ul className="list-disc pl-5 pt-2">

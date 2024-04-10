@@ -42,20 +42,21 @@ const Navbar = () => {
                 {
                     user ?
 
-                        <div  data-aos="fade-down"  data-aos-delay="1000" className="navbar-end gap-5">
+                        <div className="navbar-end gap-5">
                             <div className="avatar dropdown dropdown-hover">
                                 <div className="w-10  rounded-full ring ring-orange-500 ring-offset-base-100 ring-offset-2">
                                     <img src={user.photoURL} />
                                     <ul tabIndex={0} className="dropdown-content z-10 menu p-2 shadow bg-base-100 font-medium rounded-box w-52">
                                         <li><a>{user.displayName}</a></li>
                                         <li><Link to='/profile'>Dashboard</Link></li>
+                                        <li><button onClick={handleSignOut} className='btn flex md:hidden lg:hidden font-inter py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button></li>
                                     </ul>
                                 </div>
                             </div>
-                            <button onClick={handleSignOut} className='btn font-inter py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button>
+                            <button onClick={handleSignOut} className='btn font-inter hidden  md:flex lg:flex py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button>
                         </div>
                         :
-                        <div  data-aos="fade-down"  data-aos-delay="1000" className="navbar-end">
+                        <div className="navbar-end">
                             <Link to="/login"><button className='btn font-inter py-2 px-8 bg-orange-500 border-none text-white'>Login</button></Link>
                         </div>
                 }
