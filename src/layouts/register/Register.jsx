@@ -1,23 +1,73 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { AiOutlineEye } from "react-icons/ai";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Providers } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
+import { updateProfile } from "firebase/auth";
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const { createUser,signUpWithGoogle,signUpWithGithub } = useContext(Providers)
-
+    const {logOut,createUser,signUpWithGoogle,signUpWithGithub } = useContext(Providers)
+    const navigate = useNavigate()
 
     
     const handleSignUp = (e) => {
         e.preventDefault()
+        const name = e.target.name.value
+        const photo = e.target.photo.value
         const email = e.target.email.value
         const password = e.target.password.value
+        if(password.length < 6){
+           return toast.error("Password should be at least 6 characters or longer", {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+        else if(!/[a-z]/.test(password)){
+            return toast.error("Your password should have at least one uppercase characters", {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+        else if(!/[A-Z]/.test(password)){
+            return toast.error("Your password should have at least one lowercase characters", {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+
+
         createUser(email, password)
+        
         .then((result)=>{
             console.log(result)
-            toast('Successfully Sign Up')
+            logOut()
+            toast('Successfully Sign Up');
+            
+            updateProfile(result.user,{
+                displayName:name,
+                photoURL:photo
+            })
+            navigate('/login')
         })
         .catch((error)=>{
             const errorMessage = error.message.slice(10)
@@ -32,10 +82,20 @@ const Register = () => {
                 theme: "light",
                 });
         })
+        // updateProfile(name,photo)
+        // .then(result =>{
+        //     console.log(result)
+        // })
+        // .catch(error=>{
+        //     console.log(error)
+        // })
     }
 
     return (
         <div>
+            <Helmet>
+                <title>IndusHive | Register</title>
+            </Helmet>
             <div className="mt-10">
                 <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-orange-200">
                     <h1 className="text-2xl font-bold text-center">Register</h1>

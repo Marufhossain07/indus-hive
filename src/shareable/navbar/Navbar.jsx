@@ -4,7 +4,7 @@ import { Providers } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(Providers);
-
+    
     const handleSignOut = () => {
         logOut()
             .then()
@@ -13,7 +13,9 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         {
-            user && <li><NavLink to="/update">Update Profile</NavLink></li>
+            user &&<> <li><NavLink to="/update">Update Profile</NavLink></li>
+            <li><NavLink to="/profile">My Profile</NavLink></li></>
+
         }
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
@@ -42,8 +44,8 @@ const Navbar = () => {
 
                         <div className="navbar-end gap-5">
                             <div className="avatar">
-                                <div className="w-10 rounded-full ring ring-orange-500 ring-offset-base-100 ring-offset-2">
-                                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <div className="w-10  rounded-full ring ring-orange-500 ring-offset-base-100 ring-offset-2">
+                                    <img src={user.photoURL} />
                                 </div>
                             </div>
                             <button onClick={handleSignOut} className='btn font-inter py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button>

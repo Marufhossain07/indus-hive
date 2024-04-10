@@ -21,7 +21,7 @@ const Property = ({p}) => {
                     <p>Area : {area}</p>
                     <div className="card-actions items-center">
                         <p className="font-medium">Price : {price}</p>
-                        <Link to={user? `/property/${id}` : "/login"}><button className='btn font-inter py-2 px-8 bg-orange-500 border-none text-white'>View Property</button></Link>
+                        <Link to={`/property/${id}`}><button className='btn font-inter py-2 px-8 bg-orange-500 border-none text-white'>View Property</button></Link>
                     </div>
                 </div>
             </div>
