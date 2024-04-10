@@ -12,11 +12,10 @@ const UpdateProfile = () => {
  
         const name = e.target.name.value;
         const photo = e.target.photo.value;
-        const email = e.target.name.value;
+
         updateProfile(auth.currentUser, {
             displayName: name,
-            photoURL: photo,
-            email:email
+            photoURL: photo
         })
         .then(() => {
            
@@ -58,10 +57,7 @@ const UpdateProfile = () => {
                                 <label data-aos="fade-right" data-aos-duration='1000' data-aos-delay='1800' className="block font-bold text-lg dark:text-gray-600">Photo URL</label>
                                 <input data-aos="fade-left" data-aos-duration='1000' data-aos-delay='1900' type="text" required name="photo" id="photo" placeholder="Your Photo URL" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                             </div>
-                            <div className="space-y-1 text-sm">
-                                <label data-aos="fade-right" data-aos-duration='1000' className="block font-bold text-lg dark:text-gray-600">Email</label>
-                                <input data-aos="fade-left" data-aos-duration='1000' data-aos-delay='1000' type="email" required name="email" id="email" defaultValue={user.email} className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                            </div>
+
 
                             <button  data-aos="zoom-out" data-aos-duration='1000' data-aos-delay='1200' className='btn w-full font-bold font-inter py-2 px-8 bg-orange-500 border-none text-white'>Register</button>
                         </form>

@@ -5,9 +5,7 @@ const Footer = () => {
             <div className="container flex flex-col max-w-[1140px] mx-auto justify-between py-20 space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
-                        <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-600">
 
-                        </div>
                         <span className="self-center text-4xl font-semibold border-b border-orange-500 pb-2">IndusHive</span>
                     </a>
                 </div>
