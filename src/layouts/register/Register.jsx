@@ -59,7 +59,7 @@ const Register = () => {
         createUser(email, password)
         
         .then((result)=>{
-            console.log(result)
+
             toast('Successfully Sign Up');
             logOut()
             
@@ -86,13 +86,7 @@ const Register = () => {
                 theme: "light",
                 });
         })
-        // updateProfile(name,photo)
-        // .then(result =>{
-        //     console.log(result)
-        // })
-        // .catch(error=>{
-        //     console.log(error)
-        // })
+
     }
 
     return (

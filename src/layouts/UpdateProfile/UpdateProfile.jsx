@@ -7,7 +7,7 @@ import { getAuth, updateProfile } from 'firebase/auth';
 const UpdateProfile = () => {
     const { user } = useContext(Providers)
     const auth = getAuth()
-    console.log(user)
+
     const handleUpdate = e => {
  
         const name = e.target.name.value;
@@ -19,10 +19,10 @@ const UpdateProfile = () => {
             email:email
         })
         .then(() => {
-            console.log('Profile updated successfully!');
+           
         })
-        .catch(error => {
-            console.log('Error updating profile:', error);
+        .catch(() => {
+           
         });
         
     }

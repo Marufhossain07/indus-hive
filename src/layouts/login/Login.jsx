@@ -8,7 +8,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const {signIn,signUpWithGoogle,signUpWithGithub} = useContext(Providers)
     const location = useLocation();
-    console.log(location)
+
     const navigate = useNavigate();
 
 
