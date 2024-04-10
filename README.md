@@ -15,4 +15,8 @@ Live Site: [IndusHive](https://indus-hive.web.app/)
 We're passionate about Industrial Real Estate and committed to fostering a vibrant community of business. Join with us and embark on an unforgettable literary journey!
 
 
-**Npm Packages:**
+**Npm Packages**:
+ AOS Animation
+ React Leaflet
+ Swiper.js
+
