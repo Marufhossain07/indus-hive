@@ -6,7 +6,9 @@ const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(Providers)
     const location = useLocation()
     if(loading){
-        return <span className="loading loading-spinner text-warning"></span>
+        return <div className='w-full mt-10 flex justify-center '>
+            <span className="loading loading-spinner loading-lg text-warning"></span>
+        </div>
         
     }
     if (user){

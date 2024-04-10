@@ -8,17 +8,17 @@ import './swiper-custom.css'
 import { Navigation } from 'swiper/modules';
 const Header = () => {
     return (
-        <div className='text-white font-pop mt-14'>
+        <div data-aos="zoom-in" data-aos-duration='1000' data-aos-delay='1000' className='text-white font-pop mt-14'>
             <Swiper navigation={true} loop={true} modules={[Navigation]} className="mySwiper">
                 <SwiperSlide><div className='banner3 py-48 rounded-lg'>
                     <div className='text-left pl-14 space-y-4'>
                         <div className='flex  gap-3 items-center'>
                         <hr className='border border-orange-500 w-10'/>
-                        <h3 className='text-xl font-medium'>Experts in field</h3>
+                        <h3 data-aos="fade-right" data-aos-duration='1000' data-aos-delay='2100' className='text-xl font-medium'>Experts in field</h3>
                         </div>
-                        <h3 className='text-5xl pb-2 font-semibold'>We Plan Your Big Dreams <br /> With Expertise</h3>
-                        <p className='font-inter pb-7'>Unlock Your Industrial Potential: Find Prime Spaces <br /> for Manufacturing, Warehousing & More!</p>
-                        <button className='btn font-inter py-2 px-5 bg-orange-500 border-none text-white'>Check Now</button>
+                        <h3 data-aos="fade-left" data-aos-duration='1000' data-aos-delay='2200' className='text-5xl pb-2 font-semibold'>We Plan Your Big Dreams <br /> With Expertise</h3>
+                        <p data-aos="fade-right" data-aos-duration='1000' data-aos-delay='2300' className='font-inter pb-7'>Unlock Your Industrial Potential: Find Prime Spaces <br /> for Manufacturing, Warehousing & More!</p>
+                        <button data-aos="fade-left" data-aos-duration='1000' data-aos-delay='2400' className='btn font-inter py-2 px-5 bg-orange-500 border-none text-white'>Check Now</button>
                     </div>
                     </div></SwiperSlide>
                 <SwiperSlide>

@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async';
 import './index.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,6 +18,8 @@ import Register from './layouts/register/Register.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import UpdateProfile from './layouts/UpdateProfile/UpdateProfile.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+
+import Dashboard from './layouts/Dashboard/Dashboard.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,7 +45,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/update',
-        element: <UpdateProfile></UpdateProfile>
+        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+      },
+      {
+        path: '/profile',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
       }
     ]
   },

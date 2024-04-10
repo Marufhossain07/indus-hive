@@ -6,7 +6,7 @@ const Property = ({p}) => {
     const {user} = useContext(Providers)
     const {id,title, segment,price,status, image, area,} = p;
     return (
-        <div>
+        <div  data-aos="fade-up" data-aos-duration='1000'data-aos-delay='1000'>
             <div className="card h-full bg-base-100 border border-orange-300 shadow-orange-200 shadow-xl">
                 <figure className="px-5 pt-5">
                     <div className="relative">

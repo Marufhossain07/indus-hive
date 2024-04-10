@@ -9,7 +9,7 @@ const Properties = () => {
         .then(data => setProperty(data))
     },[])
     return (
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div  className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {
                 property.map(p => <Property key={p.id} p={p}></Property>)
             }
