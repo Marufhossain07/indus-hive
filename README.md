@@ -16,7 +16,7 @@ We're passionate about Industrial Real Estate and committed to fostering a vibra
 
 
 **Npm Packages**:
- AOS Animation
- React Leaflet
- Swiper.js
+- **AOS Animation**
+- **React Leaflet**
+- **Swiper.js**
 
