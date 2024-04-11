@@ -95,7 +95,7 @@ const Register = () => {
                 <title>IndusHive | Register</title>
             </Helmet>
             <div data-aos="fade-left" data-aos-duration='1000' className="mt-10">
-                <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-orange-200">
+                <div className=" max-w-md mx-auto p-8 space-y-3 rounded-xl bg-orange-200">
                     <h1 data-aos="fade-down" data-aos-duration='1000' data-aos-delay='1000' className="text-2xl font-bold text-center">Register</h1>
                     <form onSubmit={handleSignUp} noValidate="" action="" className="space-y-6">
                         <div className="space-y-1 text-sm">

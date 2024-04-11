@@ -19,6 +19,7 @@ const Navbar = () => {
         }
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
+        <li><button onClick={handleSignOut} className='btn flex md:hidden lg:hidden font-inter py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button></li>
     </>
     return (
         <div className="mt-10">
@@ -49,7 +50,7 @@ const Navbar = () => {
                                     <ul tabIndex={0} className="dropdown-content z-10 menu p-2 shadow bg-base-100 font-medium rounded-box w-52">
                                         <li><a>{user.displayName}</a></li>
                                         <li><Link to='/profile'>Dashboard</Link></li>
-                                        <li><button onClick={handleSignOut} className='btn flex md:hidden lg:hidden font-inter py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
