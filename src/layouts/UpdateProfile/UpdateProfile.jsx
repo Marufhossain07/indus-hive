@@ -9,7 +9,7 @@ const UpdateProfile = () => {
     const auth = getAuth()
 
     const handleUpdate = e => {
- 
+       e.preventDefault()
         const name = e.target.name.value;
         const photo = e.target.photo.value;
 
