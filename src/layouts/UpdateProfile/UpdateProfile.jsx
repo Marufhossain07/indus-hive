@@ -13,15 +13,27 @@ const UpdateProfile = () => {
         const name = e.target.name.value;
         const photo = e.target.photo.value;
 
-        updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: photo
-        })
-        .then(() => {
-        })
-        .catch(() => {
-           
-        });
+        if(name.length > 0){
+            updateProfile(auth.currentUser, {
+                displayName: name
+            })
+            .then(() => {
+            })
+            .catch(() => {
+               
+            });
+        }
+         if(photo.length > 0){
+            updateProfile(auth.currentUser, {
+                
+                photoURL: photo
+            })
+            .then(() => {
+            })
+            .catch(() => {
+               
+            });
+        }
         
     }
 
