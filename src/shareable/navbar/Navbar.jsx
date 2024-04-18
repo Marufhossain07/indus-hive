@@ -3,8 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { Providers } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-    const { user, logOut } = useContext(Providers);
+    const { user, logOut,loading } = useContext(Providers);
 
+    if(loading){
+        return <div className='w-full mt-10 flex justify-center '>
+            <span className="loading loading-spinner loading-lg text-warning"></span>
+        </div>
+        
+    }
     const handleSignOut = () => {
         logOut()
             .then()
@@ -17,11 +23,16 @@ const Navbar = () => {
                 <li><NavLink to="/profile">Dashboard</NavLink></li></>
 
         }
-        <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/register">Register</NavLink></li>
-        <li><button onClick={handleSignOut} className='btn flex md:hidden lg:hidden font-inter py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button></li>
+        {
+          user? <></> : <><li><NavLink to="/login">Login</NavLink></li>
+           <li><NavLink to="/register">Register</NavLink></li></>
+       }
+       {
+        user &&  <li><button onClick={handleSignOut} className='btn flex md:hidden lg:hidden font-inter py-2 px-8 bg-orange-500 border-none text-white'>Sign Out</button></li>
+       }
     </>
     return (
+        
         <div className="mt-10">
             <div className="navbar p-0 max-w-[1140px] mx-auto">
                 <div data-aos="fade-down" data-aos-duration="1000" className="navbar-start">
