@@ -5,7 +5,7 @@ import { Providers } from '../../AuthProvider/AuthProvider';
 import { getAuth, updateProfile } from 'firebase/auth';
 
 const UpdateProfile = () => {
-    const { user, setUser } = useContext(Providers)
+    const { user } = useContext(Providers)
     const auth = getAuth()
 
     const handleUpdate = e => {
